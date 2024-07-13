@@ -24,6 +24,7 @@ data.custom_items = {
         [1812685] = "Pincushioned Doll",
         [1489422] = "Blackened Femur",
         [1882910] = "Profane Mindcage",
+        [1489411] = "Trembling Hand"
     },
     elixirs = {
         [1856350] = "Elixir of Holy Bolts",
