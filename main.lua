@@ -109,6 +109,8 @@ local function get_nearby_item()
 end
 
 local function main_pulse()
+    if not get_local_player() then return end
+
     update_settings()
 
     if not settings.enabled then
@@ -129,6 +131,8 @@ local function main_pulse()
 end
 
 local function draw_stuff()
+    if not get_local_player() then return end
+
     if is_inventory_full() then
         graphics.text_3d("Inventory Full", get_player_position(), 20, color_red(255))
     end
