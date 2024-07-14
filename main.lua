@@ -55,7 +55,7 @@ local function check_is_quest_item(item)
     local name = item_info:get_skin_name()
 
 
-    return rarity == 0 and name:match("Global")
+    return rarity == 0 and (name:match("Global") or name:match("Glyph"))
 end
 
 ---@param item game.object
