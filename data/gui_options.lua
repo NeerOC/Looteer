@@ -7,6 +7,10 @@ local gui_options = {
         "Rare_2",
         "Legendary",
         "Unique",
+    },
+    behaviors = {
+        "Always",
+        "Orbwalk"
     }
 }
 

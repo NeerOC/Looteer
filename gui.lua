@@ -17,11 +17,6 @@ gui.elements = {
     draw_wanted_toggle = checkbox:new(false, get_hash(plugin_label .. "_draw_wanted_toggle")),
 }
 
-gui.behaviors = {
-    "Always",
-    "Orbwalk"
-}
-
 function gui:render()
     if not gui.elements.main_tree:push("Autolooteer") then
         return
@@ -34,7 +29,7 @@ function gui:render()
         return
     end
 
-    gui.elements.behavior_combo:render("Behavior", gui.behaviors, "When do you want the autolooter to execute?")
+    gui.elements.behavior_combo:render("Behavior", options.behaviors, "When do you want the autolooter to execute?")
     gui.elements.rarity_combo:render("Rarity", options.rarities, "Minimum Rarity for bot to consider picking up.")
 
     if gui.elements.choices_tree:push("Settings") then
