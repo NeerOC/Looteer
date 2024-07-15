@@ -1,6 +1,6 @@
 local plugin_label = "autolooteer"
 local gui = {}
-local data = require("data")
+local options = require("data.gui_options")
 
 gui.elements = {
     main_tree = tree_node:new(0),
@@ -35,7 +35,7 @@ function gui:render()
     end
 
     gui.elements.behavior_combo:render("Behavior", gui.behaviors, "When do you want the autolooter to execute?")
-    gui.elements.rarity_combo:render("Rarity", data.rarities, "Minimum Rarity for bot to consider picking up.")
+    gui.elements.rarity_combo:render("Rarity", options.rarities, "Minimum Rarity for bot to consider picking up.")
 
     if gui.elements.choices_tree:push("Settings") then
         gui.elements.distance_slider:render("Distance", "Distance from the loot to execute pickup")

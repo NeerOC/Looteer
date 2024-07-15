@@ -1,16 +1,4 @@
-local data = {}
-
-data.rarities = {
-    "Common",
-    "Magic",
-    "Magic_2",
-    "Rare",
-    "Rare_2",
-    "Legendary",
-    "Unique",
-}
-
-data.custom_items = {
+local custom_items = {
     boss_items = {
         [1502128] = "Living Steel",
         [1518053] = "Distilled Fear",
@@ -32,4 +20,4 @@ data.custom_items = {
     }
 }
 
-return data
+return custom_items
