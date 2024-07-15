@@ -14,6 +14,7 @@ gui.elements = {
     quest_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_quest_items_toggle")),
     boss_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_boss_items_toggle")),
     elixir_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_elixir_items_toggle")),
+    sigil_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_sigil_items_toggle")),
     draw_wanted_toggle = checkbox:new(false, get_hash(plugin_label .. "_draw_wanted_toggle")),
 }
 
@@ -41,6 +42,7 @@ function gui:render()
         gui.elements.boss_items_toggle:render("Boss Items", "Do you want to pickup Boss summon items?")
         gui.elements.elixir_items_toggle:render("Rare Elixirs",
             "Do you wanna pickup Rare Elixirs? (Momentum, Holy Bolts)")
+        gui.elements.sigil_items_toggle:render("Sigils", "Do you want to loot dungeon sigils?")
         gui.elements.draw_wanted_toggle:render("Draw Wanted",
             "Do you want to draw the items that the bot considers picking up? (Debug)")
         gui.elements.choices_tree:pop()
