@@ -8,6 +8,7 @@ local settings = {
     quest_items = false,
     boss_items = false,
     rare_elixirs = false,
+    skip_dropped = false,
     sigils = false,
     behavior = 0,
     rarity = 0,
@@ -21,6 +22,7 @@ function Settings.update()
     settings = {
         enabled = gui.elements.main_toggle:get(),
         draw_wanted_items = gui.elements.draw_wanted_toggle:get(),
+        skip_dropped = gui.elements.skip_dropped_toggle:get(),
         quest_items = gui.elements.quest_items_toggle:get(),
         boss_items = gui.elements.boss_items_toggle:get(),
         rare_elixirs = gui.elements.elixir_items_toggle:get(),

@@ -48,10 +48,18 @@ function ItemManager.check_want_item(item, ignore_distance)
     local id = item_info:get_sno_id()
     local rarity = item_info:get_rarity()
     local settings = Settings.get()
+    local affixes = item_info:get_affixes()
+
     if Utils.distance_to(item) >= settings.distance and not ignore_distance then return false end
+
+    if settings.skip_dropped and #affixes > 0 then
+        return false
+    end
+
     if settings.rarity == 0 and rarity == 0 and not ItemManager.check_is_equipment(item) then
         return false
     end
+
     if rarity < settings.rarity then
         if not (settings.boss_items and CustomItems.boss_items[id] or
                 settings.quest_items and ItemManager.check_is_quest_item(item) or
