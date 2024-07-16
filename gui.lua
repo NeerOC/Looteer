@@ -33,6 +33,8 @@ function gui:render()
         return
     end
 
+    gui.elements.skip_dropped_toggle:render("Skip Self Dropped",
+        "Do you want the bot to not loot items that you dropped yourself?")
     gui.elements.behavior_combo:render("Behavior", options.behaviors, "When do you want the autolooter to execute?")
     gui.elements.rarity_combo:render("Rarity", options.rarities, "Minimum Rarity for bot to consider picking up.")
 
@@ -48,8 +50,6 @@ function gui:render()
         gui.elements.elixir_items_toggle:render("Rare Elixirs",
             "Do you wanna pickup Rare Elixirs? (Momentum, Holy Bolts)")
         gui.elements.sigil_items_toggle:render("Sigils", "Do you want to loot dungeon sigils?")
-        gui.elements.skip_dropped_toggle:render("Skip Self Dropped",
-            "Do you want the bot to not loot items that you dropped yourself?")
         gui.elements.draw_wanted_toggle:render("Draw Wanted",
             "Do you want to draw the items that the bot considers picking up? (Debug)")
         gui.elements.choices_tree:pop()
