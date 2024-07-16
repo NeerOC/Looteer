@@ -11,6 +11,7 @@ gui.elements = {
     distance_slider = slider_int:new(1, 5, 2, get_hash(plugin_label .. "_distance_slider")),
     greater_affix_slider = slider_int:new(0, 3, 0, get_hash(plugin_label .. "_greater_affix_slider")),
     unique_greater_affix_slider = slider_int:new(0, 3, 0, get_hash(plugin_label .. "_unique_greater_affix_slider")),
+    uber_unique_greater_affix_slider = slider_int:new(0, 3, 0, get_hash(plugin_label .. "_uber_unique_greater_affix_slider")),
     quest_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_quest_items_toggle")),
     boss_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_boss_items_toggle")),
     elixir_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_elixir_items_toggle")),
@@ -37,6 +38,7 @@ function gui:render()
         gui.elements.distance_slider:render("Distance", "Distance from the loot to execute pickup")
         gui.elements.greater_affix_slider:render("Legendary GA Count", "Minimum GA's to consider picking up legendary")
         gui.elements.unique_greater_affix_slider:render("Unique GA Count", "Minimum GA's to consider picking up unique")
+        gui.elements.uber_unique_greater_affix_slider:render("Uber GA Count", "Minimum GA's to consider picking up Uber unique")
         gui.elements.quest_items_toggle:render("Quest Items",
             "Do you want to pickup Quest items, this includes Objectives in dungeons.")
         gui.elements.boss_items_toggle:render("Boss Items", "Do you want to pickup Boss summon items?")

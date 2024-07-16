@@ -68,7 +68,8 @@ function ItemManager.check_want_item(item, ignore_distance)
     if rarity >= 5 then
         local greater_affix_count = Utils.get_greater_affix_count(item_info:get_display_name())
         if (rarity == 5 and greater_affix_count < settings.ga_count) or
-            (rarity == 6 and greater_affix_count < settings.unique_ga_count) then
+            (rarity == 6 and greater_affix_count < settings.unique_ga_count) or
+            (CustomItems.ubers[id] and greater_affix_count < settings.uber_unique_ga_count) then
             return false
         end
     end

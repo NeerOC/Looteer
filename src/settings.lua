@@ -13,6 +13,7 @@ local settings = {
     rarity = 0,
     ga_count = 0,
     unique_ga_count = 0,
+    uber_unique_ga_count = 0,
     distance = 2
 }
 
@@ -28,6 +29,7 @@ function Settings.update()
         rarity = gui.elements.rarity_combo:get(),
         ga_count = gui.elements.greater_affix_slider:get(),
         unique_ga_count = gui.elements.unique_greater_affix_slider:get(),
+        uber_unique_ga_count = gui.elements.uber_unique_greater_affix_slider:get(),
         distance = gui.elements.distance_slider:get()
     }
 end

@@ -17,6 +17,16 @@ local custom_items = {
     elixirs = {
         [1856350] = "Elixir of Holy Bolts",
         [1856252] = "Elixir of Momentum",
+    },
+    ubers = {
+        [1901484] = "Tyrael's Might",
+        [223271] = "The Grandfather",
+        [241930] = "Andariel's Visage",
+        [359165] = "Ahavarion, Spear of Lycander",
+        [221017] = "Doombringer",
+        [609820] = "Harlequin Crest",
+        [1275935] = "Melted Heart of Selig",
+        [1306338] = "Ring of Starless Skies"
     }
 }
 
