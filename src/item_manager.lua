@@ -31,7 +31,7 @@ function ItemManager.check_is_quest_item(item)
     if item_info:get_rarity() ~= 0 then return false end
     local name = item_info:get_skin_name()
 
-    local quest_names = { "Global", "Glyph", "QST", "DGN", "pvp_currency" }
+    local quest_names = { "Global", "Glyph", "QST", "DGN", "pvp_currency", "CraftingMaterial" }
     for _, word in ipairs(quest_names) do
         if name:find(word) then
             return true
