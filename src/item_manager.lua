@@ -56,10 +56,6 @@ function ItemManager.check_want_item(item, ignore_distance)
         return false
     end
 
-    if settings.rarity == 0 and rarity == 0 and not ItemManager.check_is_equipment(item) then
-        return false
-    end
-
     if rarity < settings.rarity then
         if not (settings.boss_items and CustomItems.boss_items[id] or
                 settings.quest_items and ItemManager.check_is_quest_item(item) or
