@@ -49,9 +49,6 @@ function ItemManager.check_want_item(item, ignore_distance)
     local rarity = item_info:get_rarity()
     local settings = Settings.get()
     local affixes = item_info:get_affixes()
-    local lootable = loot_manager.is_lootable_item(item, true, true)
-
-    if not lootable then return false end
 
     if Utils.distance_to(item) >= settings.distance and not ignore_distance then return false end
 
@@ -81,6 +78,11 @@ function ItemManager.check_want_item(item, ignore_distance)
             return false
         end
     end
+
+    if settings.rarity == 0 and rarity == 0 and not ItemManager.check_is_equipment(item) then
+        return false
+    end
+
     return true
 end
 
