@@ -15,7 +15,8 @@ gui.elements = {
         get_hash(plugin_label .. "_uber_unique_greater_affix_slider")),
     quest_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_quest_items_toggle")),
     boss_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_boss_items_toggle")),
-    elixir_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_elixir_items_toggle")),
+    rare_elixir_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_rare_elixir_items_toggle")),
+    advanced_elixir_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_advanced_elixir_items_toggle")),
     sigil_items_toggle = checkbox:new(false, get_hash(plugin_label .. "_sigil_items_toggle")),
     skip_dropped_toggle = checkbox:new(false, get_hash(plugin_label .. "_skipped_dropped_toggle")),
     draw_wanted_toggle = checkbox:new(false, get_hash(plugin_label .. "_draw_wanted_toggle")),
@@ -47,8 +48,10 @@ function gui:render()
         gui.elements.quest_items_toggle:render("Quest Items",
             "Do you want to pickup Quest items, this includes Objectives in dungeons.")
         gui.elements.boss_items_toggle:render("Boss Items", "Do you want to pickup Boss summon items?")
-        gui.elements.elixir_items_toggle:render("Rare Elixirs",
+        gui.elements.rare_elixir_items_toggle:render("Rare Elixirs",
             "Do you wanna pickup Rare Elixirs? (Momentum, Holy Bolts)")
+	gui.elements.advanced_elixir_items_toggle:render("Advanced Elixirs",
+            "Do you wanna pickup Advanced Elixirs II?")
         gui.elements.sigil_items_toggle:render("Sigils", "Do you want to loot dungeon sigils?")
         gui.elements.draw_wanted_toggle:render("Draw Wanted",
             "Do you want to draw the items that the bot considers picking up? (Debug)")

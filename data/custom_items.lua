@@ -15,9 +15,22 @@ local custom_items = {
         [1489411] = "Trembling Hand",
         [1971857] = "Abyssal Scroll"
     },
-    elixirs = {
+    rare_elixirs = {
         [1856350] = "Elixir of Holy Bolts",
         [1856252] = "Elixir of Momentum",
+    },
+    advanced_elixirs = {
+	[1841197] = "Elixir of Advantage II",
+	[1066668] = "Elixir of Cold Resistance II",
+	[1841287] = "Elixir of Destruction II",		
+	[1066704] = "Elixir of Fire Resistance II",
+	[1841327] = "Elixir of Fortitude II",
+	[1060634] = "Elixir of Iron Barbs II",
+	[1066718] = "Elixir of Lightning Resistance II",
+	[1066727] = "Elixir of Poison Resistance II",
+	[1066737] = "Elixir of Precision II",
+	[1841178] = "Elixir of Resourcefulness II",
+	[1067122] = "Elixir of  Shadow Resistance II",
     },
     ubers = {
         [1901484] = "Tyrael's Might",
