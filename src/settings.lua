@@ -27,7 +27,7 @@ function Settings.update()
         quest_items = gui.elements.quest_items_toggle:get(),
         boss_items = gui.elements.boss_items_toggle:get(),
         rare_elixirs = gui.elements.rare_elixir_items_toggle:get(),
-		advanced_elixirs = gui.elements.advanced_elixir_items_toggle:get(),
+	advanced_elixirs = gui.elements.advanced_elixir_items_toggle:get(),
         sigils = gui.elements.sigil_items_toggle:get(),
         behavior = gui.elements.behavior_combo:get(),
         rarity = gui.elements.rarity_combo:get(),
