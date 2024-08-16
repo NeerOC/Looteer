@@ -50,7 +50,7 @@ function gui:render()
         gui.elements.boss_items_toggle:render("Boss Items", "Do you want to pickup Boss summon items?")
         gui.elements.rare_elixir_items_toggle:render("Rare Elixirs",
             "Do you wanna pickup Rare Elixirs? (Momentum, Holy Bolts)")
-		gui.elements.advanced_elixir_items_toggle:render("Advanced Elixirs",
+	gui.elements.advanced_elixir_items_toggle:render("Advanced Elixirs",
             "Do you wanna pickup Advanced Elixirs II?")
         gui.elements.sigil_items_toggle:render("Sigils", "Do you want to loot dungeon sigils?")
         gui.elements.draw_wanted_toggle:render("Draw Wanted",
