@@ -58,7 +58,7 @@ function ItemManager.check_want_item(item, ignore_distance)
     local is_special_item = settings.quest_items and ItemManager.check_is_quest_item(item) or
         settings.boss_items and CustomItems.boss_items[id] or
         settings.rare_elixirs and CustomItems.rare_elixirs[id] or
-		settings.advanced_elixirs and CustomItems.advanced_elixirs[id] or
+	settings.advanced_elixirs and CustomItems.advanced_elixirs[id] or
         settings.sigils and ItemManager.check_is_sigil(item)
 
     if is_special_item then
