@@ -28,10 +28,12 @@ end
 
 function ItemManager.check_is_quest_item(item)
     local item_info = item:get_item_info()
-    if item_info:get_rarity() ~= 0 then return false end
+    local rarity = item_info:get_rarity()
+
+    if rarity ~= 0 and rarity ~= 3 then return false end
     local name = item_info:get_skin_name()
 
-    local quest_names = { "Global", "Glyph", "QST", "DGN", "pvp_currency", "CraftingMaterial" }
+    local quest_names = { "Global", "ParagonGlyph", "QST", "DGN", "pvp_currency", "CraftingMaterial" }
     for _, word in ipairs(quest_names) do
         if name:find(word) then
             return true
@@ -58,7 +60,7 @@ function ItemManager.check_want_item(item, ignore_distance)
     local is_special_item = settings.quest_items and ItemManager.check_is_quest_item(item) or
         settings.boss_items and CustomItems.boss_items[id] or
         settings.rare_elixirs and CustomItems.rare_elixirs[id] or
-	settings.advanced_elixirs and CustomItems.advanced_elixirs[id] or
+        settings.advanced_elixirs and CustomItems.advanced_elixirs[id] or
         settings.sigils and ItemManager.check_is_sigil(item)
 
     if is_special_item then
