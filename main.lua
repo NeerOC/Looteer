@@ -2,6 +2,7 @@ local Settings = require("src.settings")
 local ItemManager = require("src.item_manager")
 local Renderer = require("src.renderer")
 local GUI = require("gui")
+local utils = require("utils.utils")
 
 local function main_pulse()
     if not get_local_player() then return end
@@ -14,7 +15,12 @@ local function main_pulse()
 
     local wanted_item = ItemManager.get_nearby_item()
     if wanted_item then
-        interact_object(wanted_item)
+        if utils.distance_to(wanted_item) > 2 then
+            local item_position = wanted_item:get_position()
+            pathfinder.request_move(item_position)
+        else
+            interact_object(wanted_item)
+        end
     end
 end
 
