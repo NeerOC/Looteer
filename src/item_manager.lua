@@ -28,9 +28,7 @@ end
 
 function ItemManager.check_is_quest_item(item)
     local item_info = item:get_item_info()
-    local rarity = item_info:get_rarity()
 
-    if rarity ~= 0 and rarity ~= 3 then return false end
     local name = item_info:get_skin_name()
 
     local quest_names = { "Global", "Glyph", "QST", "DGN", "pvp_currency", "CraftingMaterial" }
