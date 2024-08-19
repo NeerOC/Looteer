@@ -1,4 +1,4 @@
-local plugin_label = "autolooteer"
+local plugin_label = "looteer"
 local gui = {}
 local options = require("data.gui_options")
 
@@ -23,7 +23,7 @@ gui.elements = {
 }
 
 function gui:render()
-    if not gui.elements.main_tree:push("Autolooteer") then
+    if not gui.elements.main_tree:push("Loteer") then
         return
     end
 
