@@ -11,6 +11,14 @@ function Renderer.draw_stuff()
         graphics.text_3d("Inventory Full", get_player_position(), 20, color_red(255))
     end
 
+    if Utils.is_consumable_inventory_full() then
+        local ppos = get_player_position()
+        local px, py, pz = ppos:x(), ppos:y(), ppos:z() + 1
+        local new_ppos = vec3:new(px, py, pz)
+
+        graphics.text_3d("Consumable Inventory Full", new_ppos, 20, color_red(255))
+    end
+
     if not Settings.get().draw_wanted_items then return end
 
     local items = actors_manager:get_all_items()
