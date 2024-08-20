@@ -65,7 +65,7 @@ function ItemManager.check_want_item(item, ignore_distance)
         return true
     elseif rarity < settings.rarity then
         return false
-    elseif rarity == 0 and not is_special_item then
+    elseif rarity == 0 and not is_special_item and settings.rarity > 0 then
         return false
     elseif not is_special_item and Utils.is_inventory_full() then
         return false
